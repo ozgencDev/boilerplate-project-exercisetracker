@@ -81,7 +81,7 @@ exports.getExercises = async (req, res) => {
   const responseSchema = {
     username: user.username,
     _id: user._id,
-    exercise: user.log,
+    exercises: user.log,
   };
   res.json(responseSchema);
 };
