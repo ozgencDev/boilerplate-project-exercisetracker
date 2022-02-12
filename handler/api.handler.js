@@ -74,3 +74,14 @@ exports.getUserLogs = async (req, res) => {
 
   res.json(responseSchema);
 };
+
+exports.getExercises = async (req, res) => {
+  let _id = req.body[":_id"] || req.params._id;
+  const user = await User.findById(_id);
+  const responseSchema = {
+    username: user.username,
+    _id: user._id,
+    exercises: user.log,
+  };
+  res.json(responseSchema);
+};

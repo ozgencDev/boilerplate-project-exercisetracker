@@ -39,5 +39,3 @@ const log = [
     date: "Tue Oct 11 2022",
   },
 ];
-
-console.log(exports.queryDate(log, "2022-10-10", "2022-10-12", undefined));
