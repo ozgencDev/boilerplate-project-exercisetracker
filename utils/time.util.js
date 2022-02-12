@@ -20,22 +20,8 @@ exports.queryDate = (logTimes, from, to, limit) => {
     : 10000000000000;
 
   let filtered = logTimes.filter((log) => {
-    //console.log(moment(log.date, "ddd MMM DD YYYY").valueOf());
     let logTime = moment(log.date, "ddd MMM DD YYYY").valueOf();
     return logTime >= from && logTime <= to;
   });
   return filtered.slice(0, limit);
 };
-
-const log = [
-  {
-    description: "test",
-    duration: 60,
-    date: "Mon Oct 10 2022",
-  },
-  {
-    description: "test -2 ",
-    duration: 60,
-    date: "Tue Oct 11 2022",
-  },
-];

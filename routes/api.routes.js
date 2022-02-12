@@ -7,7 +7,7 @@ const {
   getExercises,
 } = require("../handler/api.handler");
 
-route.get("/api/users", getUsers); //tüm kullanıcıları alacaksın
+route.get("/api/users", getUsers);
 route.post("/api/users", createUser);
 
 route.get("/api/users/:_id/logs", getUserLogs);
