@@ -51,7 +51,7 @@ exports.addExercises = async (req, res) => {
     res.json({
       username: user.username,
       description,
-      duration,
+      duration: +duration,
       date,
       _id: user._id,
       exercise: user.log,
